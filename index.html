@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Mario Torres</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <div>
+                <h1>Carlos Mario Torres</h1>
+                <p>
+                    Ayudo a crear experiencias digitales atractivas y funcionales como programador junior en frontend y
+                    backend.
+                    Soy ingeniero en multimedia y me apasiona el desarrollo web, combinando creatividad y lógica para
+                    construir
+                    interfaces intuitivas y sistemas eficientes.
+                </p>
+            </div>
+            <img class="sonrisa" src="/images/memoji.png" alt="Imagen lista de tareas">
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="#aboutmi">Sobre mí</a></li>
+            <li><a href="#hobbies">Mis hobbies</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="aboutmi">
+            <h2>Sobre mí</h2>
+            <img src="/images/car.png" alt="Foto de perfil"
+                style="height: 300px; max-width: 100%; border-radius: 10px;">
+            <p>Soy Carlos, un apasionado del desarrollo web, el diseño y la tecnología. Me encanta crear cosas nuevas
+                con código y mejorar la experiencia de los usuarios.</p>
+        </section>
+
+        <section id="hobbies">
+            <h2>Mis hobbies</h2>
+            <ul id="lista-tareas">
+                <li>Practicar HTML</li>
+                <li>Ir al super</li>
+                <li>Ir por un cafecito</li>
+            </ul>
+            <form id="formulario-tarea">
+                <input type="text" id="nueva-tarea" placeholder="Agregar otro hobbie" required>
+                <button type="submit" id="agregar" class="miBoton">Agregar</button>
+            </form>
+            <img src="/images/sonrisa.png" alt="Imagen lista de tareas" height="50px" width="50px"
+                style="margin-top: 1rem;">
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form id="formulario-contacto">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <button type="button" onclick="mostrarMensaje()">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Laboratorio WEB</p>
+    </footer>
+
+    <script>
+        function mostrarMensaje() {
+            const nombre = document.getElementById("nombre").value;
+            if (nombre.trim() !== "") {
+                alert("¡Gracias por contactarte, " + nombre + "!");
+            } else {
+                alert("Por favor, ingresa tu nombre.");
+            }
+        }
+    </script>
+
+    <script src="/js/Script.js"></script>
+</body>
+
+</html>
